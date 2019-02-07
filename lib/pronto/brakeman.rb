@@ -1,8 +1,8 @@
 require 'pronto'
-require 'brakeman'
+require 'railroader'
 
 module Pronto
-  class Brakeman < Runner
+  class Railroader < Runner
     def run
       files = ruby_patches.map do |patch|
         patch.new_file_full_path.relative_path_from(repo_path).to_s
@@ -10,11 +10,11 @@ module Pronto
 
       return [] unless files.any?
 
-      output = ::Brakeman.run(app_path: repo_path,
+      output = ::Railroader.run(app_path: repo_path,
                               output_formats: [:to_s],
                               only_files: files)
       messages_for(ruby_patches, output).compact
-    rescue ::Brakeman::NoApplication
+    rescue ::Railroader::NoApplication
       []
     end
 
@@ -40,11 +40,11 @@ module Pronto
 
     def severity_for_confidence(confidence_level)
       case confidence_level
-      when 0 # Brakeman High confidence
+      when 0 # Railroader High confidence
         :fatal
-      when 1 # Brakeman Medium confidence
+      when 1 # Railroader Medium confidence
         :warning
-      else # Brakeman Low confidence (and other possibilities)
+      else # Railroader Low confidence (and other possibilities)
         :info
       end
     end

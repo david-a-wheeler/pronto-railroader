@@ -1,6 +1,6 @@
 require 'rspec'
 require 'rspec/its'
-require 'pronto/brakeman'
+require 'pronto/railroader'
 require 'fileutils'
 
 RSpec.shared_context 'test repo' do

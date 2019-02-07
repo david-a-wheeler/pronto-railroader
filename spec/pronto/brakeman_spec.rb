@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 module Pronto
-  describe Brakeman do
-    let(:brakeman) { Brakeman.new(patches) }
+  describe Railroader do
+    let(:railroader) { Railroader.new(patches) }
 
     describe '#run' do
-      subject { brakeman.run }
+      subject { railroader.run }
 
       context 'patches are nil' do
         let(:patches) { nil }
@@ -36,7 +36,7 @@ module Pronto
     end
 
     describe "#severity_for_confidence" do
-      subject { brakeman.severity_for_confidence(confidence_level) }
+      subject { railroader.severity_for_confidence(confidence_level) }
 
       let(:patches) { nil }
 

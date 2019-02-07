@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
-require 'pronto/brakeman/version'
+require 'pronto/railroader/version'
 require 'English'
 
 Gem::Specification.new do |s|
-  s.name = 'pronto-brakeman'
-  s.version = Pronto::BrakemanVersion::VERSION
+  s.name = 'pronto-railroader'
+  s.version = Pronto::RailroaderVersion::VERSION
   s.platform = Gem::Platform::RUBY
   s.author = 'Mindaugas Mozūras'
   s.email = 'mindaugas.mozuras@gmail.com'
-  s.homepage = 'http://github.com/mmozuras/pronto-brakeman'
-  s.summary = 'Pronto runner for Brakeman, security vulnerability scanner for RoR'
+  s.homepage = 'http://github.com/mmozuras/pronto-railroader'
+  s.summary = 'Pronto runner for Railroader, security vulnerability scanner for RoR'
 
   s.licenses = ['MIT']
   s.required_ruby_version = '>= 2.3.0'
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency('pronto', '~> 0.10.0')
-  s.add_runtime_dependency('brakeman', '>= 3.2.0')
+  s.add_runtime_dependency('railroader', '>= 3.2.0')
   s.add_development_dependency('rake', '~> 12.0')
   s.add_development_dependency('rspec', '~> 3.4')
   s.add_development_dependency('rspec-its', '~> 1.2')
