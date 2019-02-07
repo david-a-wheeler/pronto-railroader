@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.name = 'pronto-railroader'
   s.version = Pronto::RailroaderVersion::VERSION
   s.platform = Gem::Platform::RUBY
-  s.author = 'Mindaugas Mozūras'
-  s.email = 'mindaugas.mozuras@gmail.com'
-  s.homepage = 'http://github.com/mmozuras/pronto-railroader'
+  s.author = 'David A. Wheeler adn Mindaugas Mozūras'
+  s.email = 'dwheeler@dwheeler.com'
+  s.homepage = 'http://github.com/david-a-wheeler/pronto-railroader'
   s.summary = 'Pronto runner for Railroader, security vulnerability scanner for RoR'
 
   s.licenses = ['MIT']
